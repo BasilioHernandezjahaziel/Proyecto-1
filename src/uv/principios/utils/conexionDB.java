@@ -13,16 +13,16 @@ import java.util.logging.Logger;
  *
  * @author jahaziel, David, Gabriel
  */
-public class conexionDB {
+public class ConexionDB {
     
-    private static conexionDB con=null;
-    public static conexionDB getInstance(){
+    private static ConexionDB con=null;
+    public static ConexionDB getInstance(){
         if(con==null)
-            con=new conexionDB();
+            con=new ConexionDB();
         return con;
     }
     private Connection conn = null;
-    conexionDB(){
+    ConexionDB(){
        String urlDatabase = "jdbc:postgresql://localhost:5432/proyecto1";
         try{
             Class.forName("org.postgresql.Driver");
